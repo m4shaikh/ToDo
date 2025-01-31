@@ -1,0 +1,157 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2.5em;
+    color: #bb86fc;
+    font-weight: 700;
+}
+
+/* Form Container */
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.8);
+    text-align: left;
+}
+
+/* Labels */
+form label {
+    font-size: 1.1em;
+    color: #03dac5;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Input Fields */
+form input,
+form textarea,
+form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #03dac5;
+    border-radius: 6px;
+    background-color: #121212;
+    color: #e0e0e0;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+form input:focus,
+form textarea:focus,
+form select:focus {
+    outline: none;
+    border-color: #00bfa5;
+    box-shadow: 0 0 8px #00bfa5;
+}
+
+/* Textarea Default Size */
+form textarea {
+    min-height: 150px; /* Larger default size for textarea */
+}
+
+
+form .save-btn,
+form .btn{
+    background-color: #03dac5;
+    color: #121212;
+}
+
+form .save-btn:hover,
+form .btn:hover{
+    background-color: #00bfa5;
+    transform: translateY(-2px);
+}
+
+form .cancel-btn {
+    background-color: #cf6679;
+    color: #121212;
+}
+
+form .cancel-btn:hover {
+    background-color: #b00020;
+    transform: translateY(-2px);
+}
+
+/* Button Alignment */
+form .button-link {
+    text-decoration: none;
+}
+
+/* Back Link */
+a.back-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #03dac5;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a.back-link:hover {
+    color: #00bfa5;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    form {
+        padding: 20px;
+    }
+
+    form .save-btn,
+    form .cancel-btn,
+    form .btn{
+        width: 100%; /* Stack buttons vertically on small screens */
+        margin-bottom: 10px;
+    }
+}
+
+
+form .save-btn,
+form .cancel-btn,
+form .btn{
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+    margin-right: 10px;
+    font-weight: bold;
+    width: auto; /* Remove any width causing issues */
+}
+
+/* Flexbox for Button Alignment */
+form {
+    display: flex;
+    flex-direction: column; /* Default column layout */
+    gap: 15px; /* Gap between elements */
+}
+
+form .save-btn,
+form .cancel-btn,
+form .btn{
+    flex: 1 0 auto; /* Allow buttons to take only necessary space */
+}
+
+form .button-row {
+    display: flex;
+    justify-content: space-between; /* Align buttons on the same line */
+    gap: 10px; /* Add spacing between buttons */
+}

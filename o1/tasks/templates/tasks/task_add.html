@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Task</title>
+    <link rel="stylesheet" href="{% static 'tasks/sbv.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Add New Task</h1>
+    </header>
+    <main>
+        <div class="form-container">
+            <form method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="task_name">Task Name:</label>
+                    <input type="text" id="task_name" name="name" placeholder="Enter task name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="task_details">Task Details:</label>
+                    <textarea id="task_details" name="detail" rows="4" placeholder="Enter task details"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="task_status">Status:</label>
+                    <select id="task_status" name="is_completed">
+                        <option value="False">Pending</option>
+                        <option value="True">Completed</option>
+                    </select>
+                </div>
+                <div class="button-row">
+                    <button type="submit" class="btn">Add Task</button>
+                </div>
+                
+            </form>
+            <a href="{% url 'task_list' %}" class="back-link">Back to Task List</a>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Task</title>
+    <link rel="stylesheet" href="{% static 'tasks/sbv.css' %}">
+</head>
+<body>
+    <h1>Update Task</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="name">Task Name:</label>
+        <input type="text" id="name" name="name" value="{{ task.name }}" required>
+        
+        <label for="detail">Details:</label>
+        <textarea id="detail" name="details" required>{{ task.detail }}</textarea>
+        
+        <button type="submit" class="save-btn">Save Changes</button>
+        <a href="{% url 'task_list' %}" class="cancel-btn button-link">Cancel</a>
+    </form>
+</body>
+</html>

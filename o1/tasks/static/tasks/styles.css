@@ -1,0 +1,212 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 2.5em;
+    color: #bb86fc;
+    font-weight: 700;
+}
+
+/* Task Container */
+.task-container {
+    max-width: 1300px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+/* Task Card */
+.task-card {
+    background: #1e1e1e;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    width: calc(100% - 40px);
+    max-width: 350px;
+    border-left: 5px solid #03dac5;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.task-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.9);
+}
+
+.task-card h2 {
+    margin: 0 0 10px;
+    font-size: 1.8em;
+    color: #e0e0e0;
+    font-weight: 500;
+}
+
+.task-card p {
+    margin: 8px 0;
+    font-size: 1em;
+    color: #bdbdbd;
+}
+
+.task-card p strong {
+    color: #03dac5;
+}
+
+/* No Tasks Message */
+.no-tasks {
+    text-align: center;
+    font-size: 1.3em;
+    color: #757575;
+    margin-top: 40px;
+}
+
+.no-tasks a {
+    color: #bb86fc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.no-tasks a:hover {
+    text-decoration: underline;
+}
+
+/* Actions */
+.actions {
+    margin-top: 15px;
+    text-align: right;
+}
+
+.actions form {
+    display: inline;
+}
+
+.complete-btn, 
+.delete-btn {
+    background-color: #03dac5;
+    border: none;
+    border-radius: 6px;
+    color: #121212;
+    padding: 10px 15px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.complete-btn {
+    margin-right: 10px;
+}
+
+.complete-btn:hover {
+    background-color: #00bfa5;
+    transform: scale(1.1);
+}
+
+.delete-btn {
+    background-color: #cf6679;
+}
+
+.delete-btn:hover {
+    background-color: #b00020;
+    transform: scale(1.1);
+}
+
+/* Add Task Link */
+.add-task-link {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.add-task-link a {
+    display: inline-block;
+    background-color: #bb86fc;
+    color: #121212;
+    padding: 12px 25px;
+    font-size: 1.2em;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.add-task-link a:hover {
+    background-color: #9a67ea;
+    transform: translateY(-3px);
+}
+
+/* Scrollbar (Optional) */
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #616161;
+    border-radius: 4px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: #757575;
+}
+/* Task Card */
+.task-card {
+    background: #1e1e1e;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    width: calc(100% - 40px);
+    max-width: 350px;
+    border-left: 5px solid #03dac5;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.actions form {
+    display: inline;
+    margin: 5px;
+}
+
+.complete-btn, 
+.delete-btn, 
+.edit-btn {
+    background-color: #03dac5;
+    border: none;
+    border-radius: 6px;
+    color: #121212;
+    padding: 10px 15px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.complete-btn {
+    margin-right: 5px;
+}
+
+.complete-btn:hover {
+    background-color: #00bfa5;
+    transform: scale(1.1);
+}
+
+.delete-btn {
+    background-color: #cf6679;
+}
+
+.delete-btn:hover {
+    background-color: #b00020;
+    transform: scale(1.1);
+}
+
+.edit-btn {
+    background-color: #bb86fc;
+}
+
+.edit-btn:hover {
+    background-color: #9a67ea;
+    transform: scale(1.1);
+}
